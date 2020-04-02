@@ -2,12 +2,19 @@ cmake_minimum_required(VERSION 3.15)
 
 project(window VERSION 1.0)
 
+option(BUILD_INTERNAL "Include internal build features" ON)
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 # Configure Qt
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
+
+if(BUILD_INTERNAL)
+  message(STATUS "Build with internal features")
+  # optional defines and actions
+endif()
 
 file(GLOB_RECURSE UI_FILES src/*.ui)
 file(GLOB_RECURSE SRC_FILES src/*.cpp)
