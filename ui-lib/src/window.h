@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QtGui>
-#include "window.h"
+#include "ui_window.h"
 
 class Window : public QMainWindow
 {
@@ -13,5 +13,3 @@ class Window : public QMainWindow
   private:
     Ui::Window ui;
 };
-
-#endif
