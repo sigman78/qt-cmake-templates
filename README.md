@@ -1,0 +1,3 @@
+Qt cmake boilerplate
+====================
+
